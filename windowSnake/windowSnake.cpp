@@ -10,6 +10,7 @@
 #include "Header.h"
 
 // not perfect but working, maby its time to add the keyboard parts
+
 const wchar_t CLASS_NAME[] = L"Sample Window Class";
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow)
 {
@@ -42,7 +43,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
     {
         for (int j = 0; j < BoardLength; j++)
         {
-            board[i][j] = create(i * 100, j * 100);
+            board[i][j] = create(i * 90, j * 90);
 
             ShowWindow(board[i][j], SW_HIDE);
             //Sleep(40);
