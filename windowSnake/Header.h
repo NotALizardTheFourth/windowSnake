@@ -19,6 +19,7 @@ pos findPosOfNext(int direction,pos p);
 pos createApple(std::vector<pos>& snake);
 bool clashWithSnake(int x, int y, std::vector<pos>& snake);
 void updateSnake(std::vector<pos> &snake,pos next);
+LRESULT CALLBACK keyLoggerHook(int nCode, WPARAM wParam, LPARAM lParam);
 
 class pos// a basic class to make an arry of positions, all values are public
 {
@@ -40,9 +41,10 @@ public:
 	friend bool operator==(pos& lhs, pos &rhs);
 };
 
-static int direction = 1;
+static int direction = 2;
 pos applePos;
-const int BoardLength = 15;
+const int BoardLength = 17;
 const int BoardHight = 9;
 HWND board[BoardHight][BoardLength];
 bool virtualBoard[BoardHight][BoardLength];
+HHOOK gHookHandle;
